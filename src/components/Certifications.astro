@@ -1,0 +1,71 @@
+---
+import { siteContent } from '../data/content';
+---
+
+<section class="border-b-[3px] border-black bg-[#F4F0E6] py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-[3px] border-black pb-8">
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#FFD23F] text-black font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-wider border-[2px] border-black shadow-[2px_2px_0_#000]">
+          VALIDASI KOMPETENSI
+        </div>
+        <h2 class="font-['Archivo_Black'] text-3xl sm:text-4xl md:text-5xl text-black uppercase tracking-tight">
+          Sertifikasi Industri
+        </h2>
+        <p class="font-['Space_Grotesk'] text-base sm:text-lg text-neutral-800 max-w-2xl">
+          Sertifikasi resmi dari Google, DQLab, Dicoding, IDX, dan Ruangguru yang memvalidasi kemampuan teknis dan edukasi.
+        </p>
+      </div>
+
+      <div class="font-['JetBrains_Mono'] text-xs bg-white border-[2px] border-black p-3 font-bold uppercase shadow-[3px_3px_0_#000]">
+        TOTAL: {siteContent.certifications.length} SERTIFIKAT TERVERIFIKASI
+      </div>
+    </div>
+
+    <!-- Certificate Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {siteContent.certifications.map((cert) => (
+        <div class="bg-white border-[3px] border-black p-6 shadow-[5px_5px_0_#000] flex flex-col justify-between space-y-4 hover:-translate-y-1 transition-transform">
+          
+          <div class="space-y-3">
+            <!-- Issuer & Date Meta -->
+            <div class="flex items-center justify-between border-b-[2px] border-black pb-2 text-xs font-['JetBrains_Mono']">
+              <span class="font-bold text-[#B3202A] uppercase">
+                {cert.issuer}
+              </span>
+              <span class="font-bold text-neutral-600">
+                {cert.date}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="font-['Archivo_Black'] text-lg sm:text-xl text-black leading-snug">
+              {cert.title}
+            </h3>
+
+            <!-- Category & ID -->
+            <div class="flex flex-wrap items-center gap-2 pt-1">
+              <span class="font-['JetBrains_Mono'] text-[11px] font-bold px-2 py-0.5 bg-[#FFD23F] border border-black text-black">
+                {cert.category}
+              </span>
+              {cert.credentialId && (
+                <span class="font-['JetBrains_Mono'] text-[11px] font-bold px-2 py-0.5 bg-neutral-100 border border-black text-neutral-800">
+                  ID: {cert.credentialId}
+                </span>
+              )}
+            </div>
+          </div>
+
+          <!-- Competency Note -->
+          <div class="pt-3 border-t-[2px] border-black/10 font-['Space_Grotesk'] text-xs text-neutral-600">
+            {cert.verifyNote}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

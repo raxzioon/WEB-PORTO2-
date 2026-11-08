@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #F4F0E6;
+  --color-canvas-card: #FFFFFF;
+  --color-ink: #0A0A0A;
+  --color-telkom: #B3202A;
+  --color-highlight: #FFD23F;
+  --color-accent-blue: #3A5BFF;
+
+  --font-heading: 'Archivo Black', -apple-system, sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --shadow-brutal: 5px 5px 0px #0A0A0A;
+  --shadow-brutal-lg: 8px 8px 0px #0A0A0A;
+  --shadow-brutal-sm: 3px 3px 0px #0A0A0A;
+  --shadow-brutal-hover: 2px 2px 0px #0A0A0A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-highlight);
+    color: #0A0A0A;
+  }
+}
+
+/* Neo-Brutalist Utility Classes */
+.brutal-border {
+  border: 3px solid #0A0A0A;
+}
+
+.brutal-border-b {
+  border-bottom: 3px solid #0A0A0A;
+}
+
+.brutal-border-t {
+  border-top: 3px solid #0A0A0A;
+}
+
+.brutal-border-r {
+  border-right: 3px solid #0A0A0A;
+}
+
+.brutal-border-l {
+  border-left: 3px solid #0A0A0A;
+}
+
+.brutal-shadow {
+  box-shadow: 5px 5px 0px #0A0A0A;
+}
+
+.brutal-shadow-sm {
+  box-shadow: 3px 3px 0px #0A0A0A;
+}
+
+.brutal-shadow-lg {
+  box-shadow: 8px 8px 0px #0A0A0A;
+}
+
+.brutal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 3px solid #0A0A0A;
+  box-shadow: 5px 5px 0px #0A0A0A;
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.brutal-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0px #0A0A0A;
+}
+
+.brutal-btn:active {
+  transform: translate(5px, 5px);
+  box-shadow: 0px 0px 0px #0A0A0A;
+}
+
+.brutal-card {
+  border: 3px solid #0A0A0A;
+  box-shadow: 5px 5px 0px #0A0A0A;
+  background-color: #FFFFFF;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.brutal-card-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #0A0A0A;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

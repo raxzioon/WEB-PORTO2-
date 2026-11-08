@@ -1,0 +1,111 @@
+---
+import { siteContent } from '../data/content';
+---
+
+<section id="pengalaman" class="border-b-[3px] border-black bg-white py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-[3px] border-black pb-8">
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#FFD23F] text-black font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-wider border-[2px] border-black shadow-[2px_2px_0_#000]">
+          REKAM JEJAK KARIER & KAMPUS
+        </div>
+        <h2 class="font-['Archivo_Black'] text-3xl sm:text-4xl md:text-5xl text-black uppercase tracking-tight">
+          Pengalaman Nyata
+        </h2>
+        <p class="font-['Space_Grotesk'] text-base sm:text-lg text-neutral-700 max-w-2xl">
+          Urut dari yang paling baru. Setiap posisi mengedepankan tanggung jawab teknis konkret dan hasil nyata.
+        </p>
+      </div>
+
+      <!-- Quick Summary Stats -->
+      <div class="bg-[#F4F0E6] border-[2px] border-black p-4 font-['JetBrains_Mono'] text-xs space-y-1.5 self-start md:self-auto shrink-0 shadow-[4px_4px_0_#000]">
+        <div class="font-bold text-black uppercase">STATUS SAAT INI:</div>
+        <div class="text-[#B3202A] font-bold">● S1 Sistem Informasi (Telkom University)</div>
+        <div class="text-neutral-700">● Asisten Lab SAG & AICOMS Machine Learning</div>
+        <div class="text-neutral-700">● Master Teacher Roblox & Guru IT Sekolah</div>
+      </div>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="relative border-l-[3px] border-black ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-10">
+      
+      {siteContent.experience.map((item, idx) => (
+        <div class="relative group">
+          
+          <!-- Node Dot on Border -->
+          <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 bg-[#FFD23F] border-[3px] border-black group-hover:bg-[#B3202A] group-hover:scale-110 transition-all shadow-[2px_2px_0_#000]"></div>
+
+          <!-- Card Content -->
+          <div class="bg-[#F4F0E6] border-[3px] border-black p-6 shadow-[5px_5px_0_#000] hover:translate-x-1 transition-transform">
+            
+            <!-- Meta Bar -->
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b-[2px] border-black/20 pb-3 mb-3">
+              <span class="font-['JetBrains_Mono'] text-xs sm:text-sm font-bold text-[#B3202A] uppercase">
+                {item.period}
+              </span>
+              <span class="font-['JetBrains_Mono'] text-xs font-bold uppercase px-2.5 py-0.5 bg-white border border-black shadow-[2px_2px_0_#000]">
+                {item.category}
+              </span>
+            </div>
+
+            <!-- Role & Org -->
+            <h3 class="font-['Archivo_Black'] text-xl sm:text-2xl text-black">
+              {item.title}
+            </h3>
+            <div class="font-['Space_Grotesk'] text-base font-bold text-neutral-800 mb-4">
+              {item.organization}
+            </div>
+
+            <!-- Highlights -->
+            <ul class="space-y-2 font-['Space_Grotesk'] text-sm sm:text-base text-neutral-700">
+              {item.highlights.map((point) => (
+                <li class="flex items-start gap-2.5">
+                  <span class="inline-block w-1.5 h-1.5 bg-black mt-2 shrink-0"></span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+
+          </div>
+        </div>
+      ))}
+
+      <!-- Formal Education Section as Footer of Timeline -->
+      <div class="relative group pt-4">
+        <div class="absolute -left-[35px] sm:-left-[51px] top-5 w-6 h-6 bg-black border-[3px] border-black shadow-[2px_2px_0_#000]"></div>
+        
+        <div class="bg-white border-[3px] border-black p-6 shadow-[5px_5px_0_#000] space-y-4">
+          <div class="font-['JetBrains_Mono'] text-xs font-bold uppercase text-neutral-600">
+            LATAR BELAKANG PENDIDIKAN FORMAL (SESUAI DOKUMEN RESMI CV):
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {siteContent.education.map((edu) => (
+              <div class="border-[2px] border-black p-4 bg-[#F4F0E6]">
+                <div class="font-['JetBrains_Mono'] text-xs font-bold text-[#B3202A]">
+                  {edu.period}
+                </div>
+                <div class="font-['Space_Grotesk'] text-lg font-bold text-black mt-0.5">
+                  {edu.institution}
+                </div>
+                <div class="font-['Space_Grotesk'] text-sm font-semibold text-neutral-800">
+                  {edu.degree}
+                </div>
+                <div class="inline-block px-2 py-0.5 mt-2 bg-white border border-black font-['JetBrains_Mono'] text-xs font-bold text-black">
+                  Status: {edu.status}
+                </div>
+                <p class="font-['Space_Grotesk'] text-xs text-neutral-600 mt-2">
+                  {edu.note}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

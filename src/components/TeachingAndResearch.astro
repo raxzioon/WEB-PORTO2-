@@ -1,0 +1,91 @@
+---
+import { siteContent } from '../data/content';
+---
+
+<section id="riset-mengajar" class="border-b-[3px] border-black bg-[#F4F0E6] py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Section Header -->
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#B3202A] text-white font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-wider border-[2px] border-black shadow-[2px_2px_0_#000]">
+        PEMBEDA UTAMA • DUAL CAPABILITY
+      </div>
+      <h2 class="font-['Archivo_Black'] text-3xl sm:text-4xl md:text-5xl text-black uppercase tracking-tight">
+        Mengajar & Riset Laboratorium
+      </h2>
+      <p class="font-['Space_Grotesk'] text-base sm:text-lg text-neutral-800 max-w-3xl">
+        Banyak programmer bisa menulis kode, tapi sedikit yang sanggup menjelaskannya ke orang awam sampai paham. Kemampuan komunikasi dan empati pengguna saya asah di ruang kelas, lab praktikum universitas, dan pusat riset.
+      </p>
+    </div>
+
+    <!-- 4 Pillars Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {siteContent.teachingAndResearch.map((item, idx) => (
+        <div class="bg-white border-[3px] border-black p-6 sm:p-8 shadow-[6px_6px_0_#000] flex flex-col justify-between space-y-6 hover:-translate-y-1 transition-transform">
+          
+          <div class="space-y-4">
+            <!-- Top Tag & Period -->
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b-[2px] border-black pb-3">
+              <span class="font-['JetBrains_Mono'] text-xs font-black uppercase text-[#B3202A]">
+                [PILAR #{String(idx + 1).padStart(2, '0')}]
+              </span>
+              <span class="font-['JetBrains_Mono'] text-xs font-bold text-neutral-600">
+                {item.period}
+              </span>
+            </div>
+
+            <!-- Title & Institution -->
+            <div>
+              <h3 class="font-['Archivo_Black'] text-xl sm:text-2xl text-black leading-snug">
+                {item.title}
+              </h3>
+              <div class="font-['Space_Grotesk'] text-sm sm:text-base font-bold text-[#3A5BFF] mt-1">
+                {item.institution}
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="font-['Space_Grotesk'] text-sm sm:text-base text-neutral-700 leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+
+          <div class="space-y-3 pt-4 border-t-[2px] border-black/10">
+            <!-- Metric / Proof Callout -->
+            <div class="bg-[#FFD23F]/30 border-[2px] border-black p-2.5 font-['JetBrains_Mono'] text-xs font-bold text-black">
+              ⚡ Bukti: {item.stats}
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5">
+              {item.tags.map((tag) => (
+                <span class="font-['JetBrains_Mono'] text-[11px] font-bold px-2.5 py-1 bg-[#F4F0E6] border border-black text-black">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Quote Banner: Adzka's Teaching Philosophy -->
+    <div class="border-[3px] border-black bg-black text-white p-6 sm:p-8 shadow-[6px_6px_0_#FFD23F]">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <span class="font-['JetBrains_Mono'] text-xs font-bold text-[#FFD23F] uppercase tracking-wider block">
+            PRINSIP PENYAMPAIAN TEKNIS
+          </span>
+          <p class="font-['Space_Grotesk'] text-base sm:text-xl font-bold leading-snug">
+            "Sistem terbaik tidak ada gunanya jika operator desa atau pengguna UMKM takut menggunakannya. Mengajar melatih saya mendesain antarmuka yang bersahabat."
+          </p>
+        </div>
+        <div class="shrink-0 font-['JetBrains_Mono'] text-xs font-bold uppercase px-3 py-1.5 bg-[#FFD23F] text-black border border-white">
+          Human-Centered
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

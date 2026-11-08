@@ -1,0 +1,47 @@
+---
+import { siteContent } from '../data/content';
+const { showTestimonials, items } = siteContent.testimonialsConfig;
+---
+
+{showTestimonials && (
+  <section class="border-b-[3px] border-black bg-[#F4F0E6] py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="space-y-3 border-b-[3px] border-black pb-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#FFD23F] text-black font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-wider border-[2px] border-black shadow-[2px_2px_0_#000]">
+          TESTIMONI KLIEN & REKAN KERJA
+        </div>
+        <h2 class="font-['Archivo_Black'] text-3xl sm:text-4xl md:text-5xl text-black uppercase tracking-tight">
+          Apa Kata Mereka
+        </h2>
+        <p class="font-['Space_Grotesk'] text-base sm:text-lg text-neutral-800 max-w-2xl">
+          Ulasan jujur dari institusi pemerintah desa, dosen koordinator praktikum lab, dan mitra pengajar STEM.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {items.map((testi) => (
+          <div class="bg-white border-[3px] border-black p-6 shadow-[5px_5px_0_#000] flex flex-col justify-between space-y-6">
+            
+            <div class="space-y-4">
+              <span class="inline-block px-2 py-0.5 bg-[#FFD23F] border border-black font-['JetBrains_Mono'] text-[10px] font-bold text-black uppercase">
+                {testi.placeholderTag}
+              </span>
+              <p class="font-['Space_Grotesk'] text-base italic text-neutral-800 leading-relaxed">
+                {testi.quote}
+              </p>
+            </div>
+
+            <div class="pt-4 border-t-[2px] border-black font-['JetBrains_Mono'] text-xs">
+              <div class="font-bold text-black uppercase">{testi.author}</div>
+              <div class="text-[#B3202A] font-semibold">{testi.role}</div>
+              <div class="text-neutral-500 text-[11px] mt-0.5">{testi.organization}</div>
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+)}

@@ -1,0 +1,116 @@
+---
+import { siteContent } from '../data/content';
+---
+
+<section id="layanan" class="border-b-[3px] border-black bg-white py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-[3px] border-black pb-8">
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#FFD23F] text-black font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-wider border-[2px] border-black shadow-[2px_2px_0_#000]">
+          OPSI KOLABORASI
+        </div>
+        <h2 class="font-['Archivo_Black'] text-3xl sm:text-4xl md:text-5xl text-black uppercase tracking-tight">
+          Layanan & Rate Card
+        </h2>
+        <p class="font-['Space_Grotesk'] text-base sm:text-lg text-neutral-700 max-w-2xl">
+          Tiga format kolaborasi nyata berlandaskan pengalaman sebelumnya. Ruang lingkup, durasi, dan estimasi biaya disesuaikan dengan kebutuhan riil instansi atau bisnis Anda.
+        </p>
+      </div>
+
+      <!-- Advisory Pill -->
+      <div class="bg-[#FFF7F7] border-[2px] border-[#B3202A] p-3 font-['JetBrains_Mono'] text-xs text-[#B3202A] max-w-xs shadow-[3px_3px_0_#B3202A]">
+        <strong>Catatan Transparansi:</strong> Estimasi tarif riil dapat langsung didiskusikan via WhatsApp sesuai kompleksitas.
+      </div>
+    </div>
+
+    <!-- 3 Tier Package Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {siteContent.servicesRateCard.map((pkg) => (
+        <div
+          class={`border-[3px] border-black flex flex-col justify-between p-6 sm:p-8 relative ${
+            pkg.isPopular
+              ? 'bg-[#F4F0E6] shadow-[8px_8px_0_#000] ring-4 ring-black/5 -translate-y-2'
+              : 'bg-white shadow-[6px_6px_0_#000]'
+          }`}
+        >
+          <!-- Popular Badge for Package 1 -->
+          {pkg.isPopular && (
+            <div class="absolute -top-4 right-6 bg-[#B3202A] text-white font-['JetBrains_Mono'] text-xs font-bold uppercase px-3 py-1 border-[2px] border-black shadow-[3px_3px_0_#000]">
+              ★ REKOMENDASI UTAMA
+            </div>
+          )}
+
+          <div class="space-y-6">
+            
+            <!-- Package Header -->
+            <div class="space-y-2">
+              <span class="font-['JetBrains_Mono'] text-xs font-black uppercase text-[#B3202A] block">
+                {pkg.targetClient}
+              </span>
+              <h3 class="font-['Archivo_Black'] text-2xl text-black leading-snug">
+                {pkg.name}
+              </h3>
+              <p class="font-['Space_Grotesk'] text-sm text-neutral-700">
+                {pkg.tagline}
+              </p>
+            </div>
+
+            <!-- Price & Duration Box (Placeholder Compliant) -->
+            <div class="bg-white border-[2px] border-black p-4 space-y-2">
+              <div class="font-['JetBrains_Mono'] text-xs font-bold text-neutral-500 uppercase">
+                ESTIMASI BIAYA & DURASI:
+              </div>
+              <div class="font-['JetBrains_Mono'] text-sm font-black text-black bg-[#FFD23F]/30 p-2 border border-black/40">
+                {pkg.priceNote}
+              </div>
+              <div class="font-['JetBrains_Mono'] text-xs text-neutral-700">
+                Durasi: <span class="font-bold text-black">{pkg.durationNote}</span>
+              </div>
+            </div>
+
+            <!-- Scope Checklist -->
+            <div class="space-y-3 pt-2">
+              <div class="font-['JetBrains_Mono'] text-xs font-bold text-black uppercase tracking-wider">
+                RUANG LINGKUP PENGERJAAN:
+              </div>
+              <ul class="space-y-2.5 font-['Space_Grotesk'] text-sm text-neutral-800">
+                {pkg.scopeItems.map((item) => (
+                  <li class="flex items-start gap-2.5">
+                    <span class="w-4 h-4 bg-black text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                      ✓
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Bottom Action Button -->
+          <div class="pt-8 mt-6 border-t-[2px] border-black/20">
+            <a
+              href={`https://wa.me/6281906602421?text=Halo%20Adzka,%20saya%20tertarik%20berdiskusi%20mengenai%20${encodeURIComponent(pkg.name)}...`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`w-full inline-flex items-center justify-center gap-2 py-3 px-4 font-['JetBrains_Mono'] text-xs sm:text-sm font-bold uppercase border-[3px] border-black transition-all ${
+                pkg.isPopular
+                  ? 'bg-[#B3202A] text-white shadow-[4px_4px_0_#000] hover:bg-[#8F161E] hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0_#000]'
+                  : 'bg-white text-black shadow-[4px_4px_0_#000] hover:bg-[#FFD23F] hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0_#000]'
+              }`}
+            >
+              <span>Konsultasi Paket Ini</span>
+              <svg class="w-4 h-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

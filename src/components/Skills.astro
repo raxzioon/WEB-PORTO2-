@@ -1,0 +1,66 @@
+---
+import { siteContent } from '../data/content';
+---
+
+<section id="keahlian" class="border-b-[3px] border-black bg-white py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-[3px] border-black pb-8">
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#3A5BFF] text-white font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-wider border-[2px] border-black shadow-[2px_2px_0_#000]">
+          TOOLKIT & CAPABILITIES
+        </div>
+        <h2 class="font-['Archivo_Black'] text-3xl sm:text-4xl md:text-5xl text-black uppercase tracking-tight">
+          Keahlian & Teknologi
+        </h2>
+        <p class="font-['Space_Grotesk'] text-base sm:text-lg text-neutral-700 max-w-2xl">
+          Dikelompokkan berdasarkan ranah implementasi nyata. Tanpa bar persentase semu ("Laravel 90%"), karena keahlian software dibuktikan dari proyek yang jalan.
+        </p>
+      </div>
+
+      <div class="font-['JetBrains_Mono'] text-xs bg-[#FFD23F] border-[2px] border-black p-3 font-bold uppercase shadow-[3px_3px_0_#000]">
+        NO BOGUS PERCENTAGE BARS
+      </div>
+    </div>
+
+    <!-- Skills Matrix Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {siteContent.skills.map((group, gIdx) => (
+        <div class="bg-[#F4F0E6] border-[3px] border-black p-6 sm:p-8 shadow-[6px_6px_0_#000] flex flex-col justify-between space-y-6">
+          
+          <div class="space-y-3">
+            <!-- Group Badge & Title -->
+            <div class="flex items-center justify-between border-b-[2px] border-black/20 pb-2">
+              <span class="font-['JetBrains_Mono'] text-xs font-black uppercase text-[#B3202A]">
+                DOMAIN #{String(gIdx + 1).padStart(2, '0')}
+              </span>
+              <span class="font-['JetBrains_Mono'] text-xs text-neutral-600 font-bold">
+                {group.skills.length} Tools
+              </span>
+            </div>
+
+            <h3 class="font-['Archivo_Black'] text-xl sm:text-2xl text-black">
+              {group.category}
+            </h3>
+
+            <p class="font-['Space_Grotesk'] text-sm text-neutral-700 leading-relaxed">
+              {group.description}
+            </p>
+          </div>
+
+          <!-- Skills Badges Container -->
+          <div class="flex flex-wrap gap-2 pt-2 border-t-[2px] border-black/15">
+            {group.skills.map((skill) => (
+              <span class="font-['JetBrains_Mono'] text-xs sm:text-sm font-bold px-3 py-1.5 bg-white border-[2px] border-black shadow-[3px_3px_0_#000] text-black hover:bg-[#FFD23F] transition-colors">
+                {skill}
+              </span>
+            ))}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

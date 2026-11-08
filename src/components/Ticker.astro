@@ -1,0 +1,39 @@
+---
+import { siteContent } from '../data/content';
+
+// Duplicate array to ensure seamless infinite scroll
+const tickerItems = [...siteContent.ticker, ...siteContent.ticker];
+---
+
+<div class="border-b-[3px] border-black bg-[#FFD23F] overflow-hidden py-3 select-none" aria-hidden="true">
+  <div class="flex w-max animate-ticker space-x-6 hover:[animation-play-state:paused]">
+    {tickerItems.map((item, idx) => (
+      <div class="flex items-center space-x-6 font-['JetBrains_Mono'] text-xs sm:text-sm font-black uppercase tracking-widest text-black">
+        <span>{item}</span>
+        <span class="inline-block w-2.5 h-2.5 bg-black rotate-45"></span>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-ticker {
+    animation: ticker 32s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-ticker {
+      animation: none;
+      transform: none;
+    }
+  }
+</style>

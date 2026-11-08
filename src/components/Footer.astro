@@ -1,0 +1,44 @@
+---
+import { siteContent } from '../data/content';
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-white border-t-[3px] border-black py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Left: Identity & Year -->
+      <div class="flex flex-wrap items-center gap-3 text-center md:text-left">
+        <span class="font-['Archivo_Black'] text-lg text-black">
+          {siteContent.personal.displayName}
+        </span>
+        <span class="font-['JetBrains_Mono'] text-xs text-neutral-500 font-bold">
+          © {currentYear} • Sistem Informasi Telkom University
+        </span>
+      </div>
+
+      <!-- Center / Right: Nav shortcuts -->
+      <div class="flex flex-wrap items-center justify-center gap-6 font-['JetBrains_Mono'] text-xs font-bold uppercase text-neutral-800">
+        <a href="#studi-kasus" class="hover:text-[#B3202A] transition-colors">Proyek</a>
+        <a href="#pengalaman" class="hover:text-[#B3202A] transition-colors">Pengalaman</a>
+        <a href="#riset-mengajar" class="hover:text-[#B3202A] transition-colors">Mengajar</a>
+        <a href="#keahlian" class="hover:text-[#B3202A] transition-colors">Keahlian</a>
+        <a href="#layanan" class="hover:text-[#B3202A] transition-colors">Layanan</a>
+        <a href="#kontak" class="hover:text-[#B3202A] transition-colors">Kontak</a>
+      </div>
+
+      <!-- Top anchor button -->
+      <a
+        href="#"
+        class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F4F0E6] border-[2px] border-black font-['JetBrains_Mono'] text-xs font-bold text-black shadow-[2px_2px_0_#000] hover:bg-[#FFD23F] transition-colors"
+        aria-label="Kembali ke atas halaman"
+      >
+        <span>Ke Atas</span>
+        <svg class="w-3.5 h-3.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </a>
+
+    </div>
+  </div>
+</footer>

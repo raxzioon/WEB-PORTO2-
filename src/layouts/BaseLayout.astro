@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+import { siteContent } from '../data/content';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = siteContent.meta.title,
+  description = siteContent.meta.description,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id" class="w-full max-w-full overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content={siteContent.meta.author} />
+    <meta name="theme-color" content="#F4F0E6" />
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteContent.meta.url} />
+    <meta property="og:site_name" content="Adzka Arroya Portfolio" />
+    <meta property="og:image" content="/images/adzka-profile.png" />
+
+    <title>{title}</title>
+
+    <!-- Google Fonts: Archivo Black (Headings), Space Grotesk (Body), JetBrains Mono (Labels/Numbers) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon: Clean Brutalist SVG -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23B3202A'/><rect x='8' y='8' width='84' height='84' fill='%23FFD23F' stroke='%230A0A0A' stroke-width='6'/><text x='50%' y='62%' font-family='sans-serif' font-weight='900' font-size='48' fill='%230A0A0A' text-anchor='middle'>A</text></svg>"
+    />
+  </head>
+  <body class="bg-[#F4F0E6] text-[#0A0A0A] font-['Space_Grotesk'] antialiased selection:bg-[#FFD23F] selection:text-black w-full max-w-full overflow-x-hidden min-h-screen">
+    <slot />
+  </body>
+</html>
