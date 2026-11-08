@@ -29,6 +29,8 @@ export interface CaseStudy {
     kadesAvatar?: string;
     sragenLogo?: string;
     screens?: string[];
+    victoryPhoto?: string;
+    pitchPhoto?: string;
   };
   ctaLabel?: string;
   ctaUrl?: string;
@@ -213,6 +215,8 @@ export const siteContent = {
         'Rancangan finansial dan alur escrow diakui dewan juri sebagai solusi konkret nyata.',
       ],
       visualAssets: {
+        victoryPhoto: '/images/telugig-juara-1.jpg',
+        pitchPhoto: '/images/telugig-pitch.jpg',
         logo: '/images/bizcreate-logo.jpg',
       },
     },

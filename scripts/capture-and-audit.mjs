@@ -66,6 +66,14 @@ async function run() {
     await page.screenshot({ path: path.join('screenshots', 'desktop-1440-case-studies.png') });
   }
 
+  // TelUGig Gallery
+  const telugigEl = await page.$('#telugig-gallery');
+  if (telugigEl) {
+    await telugigEl.scrollIntoView();
+    await new Promise(r => setTimeout(r, 200));
+    await page.screenshot({ path: path.join('screenshots', 'desktop-1440-telugig.png') });
+  }
+
   // Experience
   const expEl = await page.$('#pengalaman');
   if (expEl) {
@@ -107,6 +115,13 @@ async function run() {
     await mCaseStudies.scrollIntoView();
     await new Promise(r => setTimeout(r, 200));
     await page.screenshot({ path: path.join('screenshots', 'mobile-375-case-studies.png') });
+  }
+
+  const mTelugig = await page.$('#telugig-gallery');
+  if (mTelugig) {
+    await mTelugig.scrollIntoView();
+    await new Promise(r => setTimeout(r, 200));
+    await page.screenshot({ path: path.join('screenshots', 'mobile-375-telugig.png') });
   }
 
   const mContact = await page.$('#kontak');
