@@ -104,7 +104,7 @@ export const siteContent = {
     campus: 'Telkom University',
     major: 'S1 Sistem Informasi',
     location: 'Kabupaten Bekasi & Bandung, Jawa Barat',
-    headline: 'Website desa untuk 4.500 warga. Dibangun satu orang.',
+    headline: 'Website desa untuk 4.500 warga. Dibangun berdua dari nol.',
     subheadline: 'Saya membangun sistem yang benar-benar dipakai orang, dan saya bisa menjelaskannya sampai orang non-teknis paham.',
     statusBadge: 'TERBUKA UNTUK PROYEK & KONTRAK',
     whatsappNumber: '+62 819-0660-2421',

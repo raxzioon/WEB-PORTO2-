@@ -18,11 +18,13 @@ Dokumen ini mencatat semua placeholder data `[ISI: ...]` yang perlu diisi oleh A
 ---
 
 ## 2. Pilihan Headline Hero (Disimpan untuk Alternatif)
-- **Opsi Aktif di Situs**:
-  > *"Website desa untuk 4.500 warga. Dibangun satu orang."*
+- **Opsi Aktif di Situs** (dikoreksi sesuai fakta bahwa proyek Denanyar dikerjakan 2 orang):
+  > *"Website desa untuk 4.500 warga. Dibangun berdua dari nol."*
 - **Opsi Alternatif 1**:
-  > *"Bangun sistem yang nyata dipakai. Ajar orang sampai paham."*
+  > *"Website desa untuk 4.500 warga. Dibangun berdua, dipakai nyata."*
 - **Opsi Alternatif 2**:
+  > *"Bangun sistem yang nyata dipakai. Ajar orang sampai paham."*
+- **Opsi Alternatif 3**:
   > *"Mahasiswa Sistem Informasi yang sudah punya klien dan produk teruji."*
 
 ---
