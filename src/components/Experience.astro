@@ -21,10 +21,13 @@ import { siteContent } from '../data/content';
 
       <!-- Quick Summary Stats -->
       <div class="bg-[#F4F0E6] border-[2px] border-black p-4 font-['JetBrains_Mono'] text-xs space-y-1.5 self-start md:self-auto shrink-0 shadow-[4px_4px_0_#000]">
-        <div class="font-bold text-black uppercase">STATUS SAAT INI:</div>
+        <div class="font-bold text-black uppercase flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>STATUS AKTIF SAAT INI:</span>
+        </div>
         <div class="text-[#B3202A] font-bold">● S1 Sistem Informasi (Telkom University)</div>
-        <div class="text-neutral-700">● Asisten Lab SAG & AICOMS Machine Learning</div>
-        <div class="text-neutral-700">● Master Teacher Roblox & Guru IT Sekolah</div>
+        <div class="text-neutral-900 font-bold">● Research Assistant (SAG Laboratory)</div>
+        <div class="text-neutral-900 font-bold">● Practicum Assistant (SAG Laboratory)</div>
       </div>
     </div>
 
@@ -42,9 +45,16 @@ import { siteContent } from '../data/content';
             
             <!-- Meta Bar -->
             <div class="flex flex-wrap items-center justify-between gap-2 border-b-[2px] border-black/20 pb-3 mb-3">
-              <span class="font-['JetBrains_Mono'] text-xs sm:text-sm font-bold text-[#B3202A] uppercase">
-                {item.period}
-              </span>
+              <div class="flex items-center gap-2">
+                <span class="font-['JetBrains_Mono'] text-xs sm:text-sm font-bold text-[#B3202A] uppercase">
+                  {item.period}
+                </span>
+                {item.period.includes('Sekarang') && (
+                  <span class="bg-[#7BE0B3] text-black font-['JetBrains_Mono'] text-[10px] font-black px-1.5 py-0.5 border border-black uppercase tracking-wider">
+                    AKTIF
+                  </span>
+                )}
+              </div>
               <span class="font-['JetBrains_Mono'] text-xs font-bold uppercase px-2.5 py-0.5 bg-white border border-black shadow-[2px_2px_0_#000]">
                 {item.category}
               </span>

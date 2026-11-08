@@ -77,7 +77,7 @@ async function run() {
   // Experience
   const expEl = await page.$('#pengalaman');
   if (expEl) {
-    await expEl.scrollIntoView();
+    await page.evaluate(() => document.querySelector('#pengalaman')?.scrollIntoView({ block: 'start' }));
     await new Promise(r => setTimeout(r, 200));
     await page.screenshot({ path: path.join('screenshots', 'desktop-1440-experience.png') });
   }

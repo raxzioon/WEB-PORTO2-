@@ -246,7 +246,7 @@ export const siteContent = {
       badgeColor: '#FFD23F',
     },
     {
-      period: 'Agustus 2026 - Sekarang',
+      period: 'Agustus 2026 - Oktober 2026',
       title: 'Roblox Studio Master Teacher & Mentor',
       organization: 'Ruangguru',
       category: 'Pengajaran',
@@ -257,7 +257,7 @@ export const siteContent = {
       badgeColor: '#FFD23F',
     },
     {
-      period: 'Juli 2026 - Sekarang',
+      period: 'Juli 2026 - Oktober 2026',
       title: 'IT Teacher',
       organization: 'Sekolah Hamidah Sampurna',
       category: 'Pengajaran',
@@ -279,7 +279,7 @@ export const siteContent = {
       badgeColor: '#B3202A',
     },
     {
-      period: 'Juli 2026 - Sekarang',
+      period: 'Juli 2026 - Oktober 2026',
       title: 'Research Assistant (Machine Learning)',
       organization: 'PUI-PT AICOMS, Telkom University',
       category: 'Akademik & Riset',
@@ -314,17 +314,17 @@ export const siteContent = {
 
   teachingAndResearch: [
     {
-      title: 'Asisten Praktikum (5 Modul Komprehensif)',
+      title: 'Asisten Riset & Praktikum (5 Modul)',
       institution: 'SAG Laboratory — Telkom University',
-      period: 'Sep 2026 - Sekarang',
-      description: 'Membimbing mahasiswa S1 Sistem Informasi dari penguasaan dokumentasi perkantoran hingga visualisasi data tingkat lanjut (Power BI) dan pembuatan website (WordPress). Berfokus pada pemahaman logika praktis, bukan hafalan antarmuka.',
-      stats: '5 Modul Lab (Word, Excel, Canva, Power BI, WordPress)',
-      tags: ['Power BI', 'Excel', 'WordPress', 'Mentoring Mahasiswa'],
+      period: 'Sep 2026 - Sekarang (Aktif)',
+      description: 'Aktif membimbing mahasiswa S1 Sistem Informasi di 5 modul praktikum inti (Word, Excel, Canva, Power BI, WordPress) serta menjalankan riset terapan di Research Division SAG Lab. Berfokus pada logika praktis dan pemecahan masalah komputasional.',
+      stats: 'Research Division & 5 Modul Praktikum Lab',
+      tags: ['Research Division', 'Power BI', 'Excel', 'WordPress', 'Mentoring Mahasiswa'],
     },
     {
       title: 'Master Teacher Roblox Studio & Lua Scripting',
       institution: 'Ruangguru (Roblox Scholarship Program)',
-      period: 'Agt 2026 - Sekarang',
+      period: 'Agt 2026 - Okt 2026 (Selesai)',
       description: 'Mengampu beasiswa resmi untuk talenta muda. Mentransformasi antusiasme bermain game menjadi pemahaman arsitektur software: variabel, loop, event-driven programming, dan spatial 3D reasoning dengan bahasa Lua.',
       stats: 'Sertifikasi Resmi Ruangguru & Roblox',
       tags: ['Lua Scripting', 'Game Development 3D', 'STEM Education', 'Algoritma'],
@@ -332,7 +332,7 @@ export const siteContent = {
     {
       title: 'Kurikulum IT Lintas Jenjang (SD & SMP)',
       institution: 'Sekolah Hamidah Sampurna',
-      period: 'Jul 2026 - Sekarang',
+      period: 'Jul 2026 - Okt 2026 (Selesai)',
       description: 'Merancang kurikulum teknologi yang berjenjang: dari computational thinking dasar kelas 4 SD menggunakan Code.org hingga logika robotika dan internet sehat untuk kelas 7, 8, dan 9 SMP.',
       stats: '4 Jenjang Kelas (Kelas 4, 7, 8, dan 9)',
       tags: ['Code.org', 'Robotika', 'Digital Literacy', 'Desain Kurikulum'],
@@ -340,7 +340,7 @@ export const siteContent = {
     {
       title: 'Riset Machine Learning Terapan',
       institution: 'PUI-PT AICOMS (Pusat Unggulan Iptek Telkom University)',
-      period: 'Jul 2026 - Sekarang',
+      period: 'Jul 2026 - Okt 2026 (Selesai)',
       description: 'Meneliti implementasi algoritma Machine Learning terapan bersama tim periset Center of Excellence, menghubungkan pemodelan data teoritis dengan kebutuhan analitik sistem nyata.',
       stats: 'Riset Akademik & Center of Excellence',
       tags: ['Machine Learning', 'Python', 'Algoritma Data', 'Data Science'],
@@ -513,7 +513,7 @@ export const siteContent = {
       degree: 'S1 Sistem Informasi (Bachelor of Science in Information Systems)',
       period: '2025 - Sekarang',
       status: 'Mahasiswa Aktif',
-      note: 'Fokus pada Rekayasa Perangkat Lunak, Tata Kelola Sistem, dan Business Intelligence. Aktif sebagai Asisten Riset di AICOMS dan Asisten Praktikum di SAG Lab.',
+      note: 'Fokus pada Rekayasa Perangkat Lunak, Tata Kelola Sistem, dan Business Intelligence. Aktif sebagai Research Assistant dan Practicum Assistant di SAG Laboratory.',
     },
     {
       institution: 'Pondok Tahfidz Sulaimaniyah',
