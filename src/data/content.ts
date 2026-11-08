@@ -171,6 +171,8 @@ export const siteContent = {
         'Data kependudukan 1.503 KK dan 19 RT kini terpetakan secara digital dan transparan.',
         'Aparatur desa memiliki panel kendali terpusat yang mudah dipahami staf non-teknis.',
       ],
+      ctaLabel: 'Kunjungi Website Resmi Desa Denanyar',
+      ctaUrl: 'https://denanyar-tangen.desa.id/',
       visualAssets: {
         hero: '/images/denanyar-hero.jpg',
         kadesAvatar: '/images/kades-avatar.jpg',

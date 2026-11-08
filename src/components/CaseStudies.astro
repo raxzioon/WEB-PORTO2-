@@ -124,19 +124,54 @@ const [desa, telugig] = siteContent.caseStudies;
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
             
             <!-- Desktop Portal Mockup (7 cols) -->
-            <div class="lg:col-span-7 border-[3px] border-black bg-black p-2 shadow-[4px_4px_0_#000]">
-              <div class="bg-[#0A0A0A] text-white px-3 py-1 font-['JetBrains_Mono'] text-[10px] sm:text-[11px] flex items-center justify-between border-b border-white/20">
-                <span>PORTAL RESMI DESA DENANYAR — BROWSER VIEW</span>
-                <span class="text-neutral-400">LARAVEL + LIVEWIRE</span>
+            <div class="lg:col-span-7 border-[3px] border-black bg-black p-2 shadow-[4px_4px_0_#000] flex flex-col justify-between">
+              <div>
+                <div class="bg-[#0A0A0A] text-white px-3 py-1.5 font-['JetBrains_Mono'] text-[10px] sm:text-[11px] flex items-center justify-between border-b border-white/20 gap-2">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#B3202A] inline-block"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#FFD23F] inline-block"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#7BE0B3] inline-block"></span>
+                    <span class="ml-2 font-bold text-neutral-300">denanyar-tangen.desa.id</span>
+                  </div>
+                  <a
+                    href="https://denanyar-tangen.desa.id/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 px-2 py-0.5 bg-[#FFD23F] text-black font-black text-[10px] uppercase hover:bg-white transition-colors"
+                  >
+                    <span>Situs Aktif ↗</span>
+                  </a>
+                </div>
+                <a
+                  href="https://denanyar-tangen.desa.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block relative bg-neutral-900 border border-white/20 mt-1.5 group cursor-pointer"
+                  title="Buka Website Resmi Desa Denanyar di tab baru"
+                >
+                  <img
+                    src={desa.visualAssets.hero}
+                    alt="Tampilan antarmuka website resmi Desa Denanyar karya Muhammad Adzka Arroya"
+                    class="w-full h-auto object-cover group-hover:opacity-95 transition-opacity"
+                    loading="lazy"
+                  />
+                  <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="bg-[#FFD23F] text-black font-['JetBrains_Mono'] text-xs font-bold px-3 py-1.5 border-[2px] border-black shadow-[3px_3px_0_#000]">
+                      Klik untuk Buka Website Asli ↗
+                    </span>
+                  </div>
+                </a>
               </div>
-              <img
-                src={desa.visualAssets.hero}
-                alt="Tampilan antarmuka website Desa Denanyar di layar komputer"
-                class="w-full h-auto object-cover border border-white/10 mt-1 max-h-[300px]"
-                loading="lazy"
-              />
-              <div class="p-2 font-['JetBrains_Mono'] text-[11px] sm:text-xs text-white/90">
-                Layanan Publik Digital: Surat Keterangan Usaha, Domisili, SKTM, dan Info BUMDes.
+              <div class="pt-2 px-1 flex flex-col sm:flex-row sm:items-center justify-between gap-1 font-['JetBrains_Mono'] text-[11px] text-white/90">
+                <span>Layanan Publik Digital: Surat Mandiri Warga, Profil Desa, & Informasi Kependudukan.</span>
+                <a
+                  href="https://denanyar-tangen.desa.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-[#FFD23F] hover:underline font-bold shrink-0"
+                >
+                  Buka denanyar-tangen.desa.id ↗
+                </a>
               </div>
             </div>
 
@@ -198,9 +233,30 @@ const [desa, telugig] = siteContent.caseStudies;
           </div>
         </div>
 
+        <!-- Live Website Call to Action Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 sm:p-5 bg-[#7BE0B3] border-[3px] border-black shadow-[4px_4px_0_#000]">
+          <div class="space-y-1 text-center sm:text-left">
+            <div class="font-['Archivo_Black'] text-sm sm:text-base md:text-lg text-black uppercase">
+              Website Ini Sudah Aktif & Berjalan di Lingkungan Produksi
+            </div>
+            <div class="font-['Space_Grotesk'] text-xs sm:text-sm text-black font-medium flex flex-wrap items-center justify-center sm:justify-start gap-1">
+              <span>Domain resmi terverifikasi:</span>
+              <code class="font-['JetBrains_Mono'] font-bold text-[11px] sm:text-xs bg-white px-1.5 py-0.5 border border-black text-black">denanyar-tangen.desa.id</code>
+            </div>
+          </div>
+          <a
+            href="https://denanyar-tangen.desa.id/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-black text-white font-['JetBrains_Mono'] text-xs sm:text-sm font-bold uppercase tracking-wider border-[2px] border-black shadow-[3px_3px_0_#fff] hover:bg-[#B3202A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_#fff] transition-all"
+          >
+            <span>Kunjungi Website Resmi</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+
       </div>
     </article>
-
 
     <!-- ========================================================================= -->
     <!-- CASE STUDY 2: TELUGIG - FREELANCE KAMPUS X UMKM -->

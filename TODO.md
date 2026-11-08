@@ -65,6 +65,7 @@ Seksi testimoni memiliki konfigurasi `showTestimonials: false` di `src/data/cont
 
 ### C. Asset & Tautan Eksternal
 1. **Live URL Platform Desa Denanyar**:
-   - `[ISI: Tautan domain resmi desa jika sudah live di internet, misal https://denanyar.desa.id]`
+   - **TERVERIFIKASI & TERPASANG**: `https://denanyar-tangen.desa.id/`
+   - Screenshot antarmuka resmi terpasang di `public/images/denanyar-hero.jpg` dan tombol navigasi langsung mengarah ke portal resmi desa.
 2. **Pitch Deck / Dokumen TelUGig**:
    - `[ISI: Tautan file pitch deck TelUGig Juara 1 jika ingin dapat diunduh publik]`
