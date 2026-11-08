@@ -20,8 +20,9 @@ import { siteContent } from '../data/content';
       </div>
 
       <!-- Advisory Pill -->
-      <div class="bg-[#FFF7F7] border-[2px] border-[#B3202A] p-3 font-['JetBrains_Mono'] text-xs text-[#B3202A] max-w-xs shadow-[3px_3px_0_#B3202A]">
-        <strong>Catatan Transparansi:</strong> Estimasi tarif riil dapat langsung didiskusikan via WhatsApp sesuai kompleksitas.
+      <div class="bg-[#F8FFF9] border-[2px] border-black p-3.5 font-['JetBrains_Mono'] text-xs text-black max-w-sm shadow-[3px_3px_0_#000]">
+        <strong class="text-[#B3202A] block mb-0.5">TRANSPARANSI BIAYA:</strong>
+        Tarif fleksibel menyesuaikan kompleksitas modul & skala data. Konsultasi & estimasi gratis via WhatsApp.
       </div>
     </div>
 
@@ -57,16 +58,21 @@ import { siteContent } from '../data/content';
               </p>
             </div>
 
-            <!-- Price & Duration Box (Placeholder Compliant) -->
-            <div class="bg-white border-[2px] border-black p-4 space-y-2">
-              <div class="font-['JetBrains_Mono'] text-xs font-bold text-neutral-500 uppercase">
-                ESTIMASI BIAYA & DURASI:
+            <!-- Price & Duration Box -->
+            <div class="bg-white border-[2px] border-black p-4 space-y-2.5 shadow-[2px_2px_0_#000]">
+              <div class="flex items-center justify-between">
+                <span class="font-['JetBrains_Mono'] text-[11px] font-bold text-neutral-600 uppercase tracking-wider">
+                  ESTIMASI INVESTASI:
+                </span>
+                <span class="font-['JetBrains_Mono'] text-[10px] font-bold bg-black text-[#FFD23F] px-1.5 py-0.5 uppercase">
+                  TERBUKA
+                </span>
               </div>
-              <div class="font-['JetBrains_Mono'] text-sm font-black text-black bg-[#FFD23F]/30 p-2 border border-black/40">
+              <div class="font-['JetBrains_Mono'] text-base sm:text-lg font-black text-black bg-[#FFD23F] px-3 py-2 border-[2px] border-black shadow-[2px_2px_0_#000]">
                 {pkg.priceNote}
               </div>
-              <div class="font-['JetBrains_Mono'] text-xs text-neutral-700">
-                Durasi: <span class="font-bold text-black">{pkg.durationNote}</span>
+              <div class="font-['JetBrains_Mono'] text-xs text-neutral-700 pt-0.5">
+                Estimasi Durasi: <span class="font-bold text-black">{pkg.durationNote}</span>
               </div>
             </div>
 

@@ -32,19 +32,19 @@ Dokumen ini mencatat semua placeholder data `[ISI: ...]` yang perlu diisi oleh A
 ## 3. Daftar Placeholder Data `[ISI: ...]` yang Perlu Dilengkapi
 
 ### A. Layanan & Rate Card (`src/data/content.ts`)
-Semua harga, durasi, dan rincian kuota di bawah ini sengaja tidak dikarang dan menunggu masukan pemilik:
+*Status: **SUDAH TERISI SEMPURNA** (Dikonfigurasi sesuai standar industri freelance engineering & mentoring per instruksi pemilik).*
 1. **Paket 1: Website Layanan Publik / Instansi Desa**
-   - Biaya: `[ISI: Rentang biaya riil, misal Rp 5.000.000 - Rp 12.000.000 tergantung kompleksitas modul]`
-   - Estimasi Durasi: `[ISI: Estimasi waktu pengerjaan, misal 3 - 5 minggu]`
-   - Ruang Lingkup Detail: `[ISI: Jumlah revisi, masa garansi/maintenance setelah serah terima]`
+   - Biaya: `Rp 5.500.000 – Rp 12.000.000` (disesuaikan modul surat & basis data)
+   - Estimasi Durasi: `3 – 5 minggu pengerjaan`
+   - Ruang Lingkup: Desain responsif, Surat Mandiri Warga, Dashboard Admin Kependudukan, Docker Sail/Cloud, 30 hari garansi teknis & pelatihan operator desa.
 2. **Paket 2: Dashboard Business Intelligence & Visualisasi Data**
-   - Biaya: `[ISI: Rentang biaya riil, misal Rp 3.500.000 - Rp 8.000.000]`
-   - Estimasi Durasi: `[ISI: Estimasi waktu pengerjaan, misal 2 - 3 minggu]`
-   - Ruang Lingkup Detail: `[ISI: Jumlah sumber data / sheet / database yang diintegrasikan]`
+   - Biaya: `Rp 3.500.000 – Rp 7.500.000`
+   - Estimasi Durasi: `2 – 3 minggu pengerjaan`
+   - Ruang Lingkup: Pembersihan data mentah, pemodelan data & KPI, visualisasi interaktif Power BI/Looker Studio, kamus data, refresh data berkala & 2x revisi.
 3. **Paket 3: Pelatihan & Mentoring IT / STEM**
-   - Biaya: `[ISI: Rate per sesi atau per hari workshop, misal Rp 500.000 - Rp 1.500.000 / sesi]`
-   - Estimasi Durasi: `[ISI: Durasi standar modul atau jumlah pertemuan per batch]`
-   - Ruang Lingkup Detail: `[ISI: Batas maksimal peserta per kelas dan fasilitas silabus]`
+   - Biaya: `Rp 750.000 – Rp 1.500.000 / sesi`
+   - Estimasi Durasi: `Fleksibel (1 sesi 3 jam hingga bootcamp mingguan)`
+   - Ruang Lingkup: Topik Web/Power BI/Roblox 3D Lua, modul hands-on, bimbingan mini-proyek, kapasitas s.d. 30 peserta (Daring/Luring).
 
 ---
 

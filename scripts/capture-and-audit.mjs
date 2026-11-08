@@ -124,6 +124,13 @@ async function run() {
     await page.screenshot({ path: path.join('screenshots', 'mobile-375-telugig.png') });
   }
 
+  const mLayanan = await page.$('#layanan');
+  if (mLayanan) {
+    await mLayanan.scrollIntoView();
+    await new Promise(r => setTimeout(r, 200));
+    await page.screenshot({ path: path.join('screenshots', 'mobile-375-ratecard.png') });
+  }
+
   const mContact = await page.$('#kontak');
   if (mContact) {
     await mContact.scrollIntoView();
