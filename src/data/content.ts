@@ -67,6 +67,8 @@ export interface CertificationItem {
   credentialId?: string;
   category: 'Cloud & AI' | 'Data & BI' | 'Coding' | 'Edukasi';
   verifyNote?: string;
+  image?: string;
+  verifyUrl?: string;
 }
 
 export interface ServicePackage {
@@ -395,9 +397,11 @@ export const siteContent = {
     {
       title: 'R Fundamental for Data Science',
       issuer: 'DQLab',
-      date: 'Juli 2026',
+      date: '19 Juli 2026',
+      credentialId: '#DQLABINTR1ENLRKH',
       category: 'Data & BI',
       verifyNote: 'Kompetensi: Manipulasi dataframe, visualisasi dan statistik dasar R',
+      image: '/images/cert-dqlab-r.jpg',
     },
     {
       title: 'Master Teacher of Roblox Education, Safety, and Civility',
@@ -406,20 +410,25 @@ export const siteContent = {
       credentialId: 'CERT-7UVDG7CE',
       category: 'Edukasi',
       verifyNote: 'Kompetensi: Pedagogi komputasional, Lua scripting, dan keamanan digital anak',
+      image: '/images/cert-roblox.jpg',
     },
     {
-      title: 'Machine Learning Course',
+      title: 'Spec-Driven Development dengan Kiro',
       issuer: 'Dicoding Indonesia',
-      date: '2023',
-      category: 'Cloud & AI',
-      verifyNote: 'Kompetensi: Supervised/Unsupervised learning & pipeline implementasi',
+      date: '12 September 2026',
+      credentialId: 'MRZMVQ5E3ZYQ',
+      category: 'Coding',
+      verifyNote: 'Kompetensi: Spec-Driven Development, unit test architecture, dan AI code workflow',
+      image: '/images/cert-dicoding-kiro.jpg',
+      verifyUrl: 'https://www.dicoding.com/certificates/MRZMVQ5E3ZYQ',
     },
     {
       title: 'Sekolah Pasar Modal (SPM)',
       issuer: 'PT Bursa Efek Indonesia (IDX) / KSEI',
-      date: '2026',
+      date: '18 September 2026',
       category: 'Data & BI',
-      verifyNote: 'Kompetensi: Analisis instrumen pasar modal dan literasi keuangan formal',
+      verifyNote: 'Kompetensi: Analisis instrumen pasar modal, mekanisme bursa efek & literasi keuangan formal',
+      image: '/images/cert-idx-spm.jpg',
     },
   ] as CertificationItem[],
 

@@ -90,6 +90,42 @@ async function run() {
     await page.screenshot({ path: path.join('screenshots', 'desktop-1440-teaching.png') });
   }
 
+  // Certifications
+  const certEl = await page.$('#sertifikasi');
+  if (certEl) {
+    // Reveal all scroll elements so full element screenshots show all cards
+    await page.evaluate(() => {
+      document.querySelectorAll('.scroll-reveal').forEach((el) => {
+        el.classList.add('is-revealed');
+      });
+    });
+    await new Promise(r => setTimeout(r, 400));
+    // Capture the entire element
+    await certEl.screenshot({ path: path.join('screenshots', 'desktop-1440-certifications.png') });
+
+    // Click Dicoding cert trigger to test modal lightbox with external verification link
+    const dicodingTrigger = await page.$('[data-cert-title="Spec-Driven Development dengan Kiro"]');
+    if (dicodingTrigger) {
+      await dicodingTrigger.click();
+      await new Promise(r => setTimeout(r, 300));
+      await page.screenshot({ path: path.join('screenshots', 'desktop-1440-cert-modal-dicoding.png') });
+      const closeBtn = await page.$('#modal-cert-close');
+      if (closeBtn) await closeBtn.click();
+      await new Promise(r => setTimeout(r, 200));
+    }
+
+    // Also click IDX SPM trigger to test SPM modal
+    const spmTrigger = await page.$('[data-cert-title="Sekolah Pasar Modal (SPM)"]');
+    if (spmTrigger) {
+      await spmTrigger.click();
+      await new Promise(r => setTimeout(r, 300));
+      await page.screenshot({ path: path.join('screenshots', 'desktop-1440-cert-modal-spm.png') });
+      const closeBtn = await page.$('#modal-cert-close');
+      if (closeBtn) await closeBtn.click();
+      await new Promise(r => setTimeout(r, 200));
+    }
+  }
+
   // Rate card & Contact
   const layananEl = await page.$('#layanan');
   if (layananEl) {
