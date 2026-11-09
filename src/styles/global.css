@@ -109,11 +109,145 @@
   box-shadow: 7px 7px 0px #0A0A0A;
 }
 
+/* =========================================================================
+   NEO-BRUTALIST MOTION & ENTRANCE SYSTEM
+   Decisive, snappy (180-260ms), zero-blur, physical spring-like snap.
+   ========================================================================= */
+
+@keyframes brutal-snap-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes brutal-scale-snap {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sticker-slap {
+  0% {
+    opacity: 0;
+    transform: scale(1.25) rotate(4deg) translateY(-10px);
+  }
+  65% {
+    transform: scale(0.98) rotate(-3deg) translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-2deg) translateY(0);
+  }
+}
+
+@keyframes node-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.25);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hero Landing Page Load Animations */
+.hero-snap-1 {
+  animation: brutal-snap-in 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 60ms;
+}
+
+.hero-snap-2 {
+  animation: brutal-snap-in 250ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 140ms;
+}
+
+.hero-snap-3 {
+  animation: brutal-snap-in 250ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 220ms;
+}
+
+.hero-snap-4 {
+  animation: brutal-snap-in 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 300ms;
+}
+
+.hero-photo-snap {
+  animation: brutal-scale-snap 280ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: 200ms;
+}
+
+.hero-sticker-slap {
+  animation: sticker-slap 320ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: 380ms;
+}
+
+/* Progressive Enhancement Scroll Reveal Classes:
+   Only applied when javascript is ready on <html> */
+html.js-ready .scroll-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 220ms cubic-bezier(0.16, 1, 0.3, 1), transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+html.js-ready .scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.js-ready .scroll-reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 220ms cubic-bezier(0.16, 1, 0.3, 1), transform 220ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: opacity, transform;
+}
+
+html.js-ready .scroll-reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Delay Classes */
+.stagger-1 { transition-delay: 50ms !important; }
+.stagger-2 { transition-delay: 100ms !important; }
+.stagger-3 { transition-delay: 150ms !important; }
+.stagger-4 { transition-delay: 200ms !important; }
+.stagger-5 { transition-delay: 250ms !important; }
+.stagger-6 { transition-delay: 300ms !important; }
+
+/* Timeline Node Pop */
+.timeline-item .timeline-node {
+  transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+html.js-ready .timeline-item.is-revealed .timeline-node {
+  animation: node-pop 260ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  html.js-ready .scroll-reveal,
+  html.js-ready .scroll-reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

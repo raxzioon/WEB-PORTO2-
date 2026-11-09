@@ -5,24 +5,39 @@ import { siteContent } from '../data/content';
 <section class="border-b-[3px] border-black bg-white" aria-label="Ringkasan Bukti Nyata">
   <div class="max-w-7xl mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y-[3px] sm:divide-y-0 sm:divide-x-[3px] divide-black">
-      {siteContent.proofMetrics.map((metric, idx) => (
-        <div class="p-6 sm:p-8 flex flex-col justify-between hover:bg-[#F4F0E6] transition-colors group">
-          <div>
-            <span class="font-['JetBrains_Mono'] text-xs font-bold text-[#B3202A] uppercase tracking-wider block mb-1">
-              [BUKTI #{String(idx + 1).padStart(2, '0')}]
-            </span>
-            <div class="font-['JetBrains_Mono'] text-4xl sm:text-5xl font-black text-black tracking-tight group-hover:translate-x-1 transition-transform">
-              {metric.value}
+      {siteContent.proofMetrics.map((metric, idx) => {
+        // Prepare counter attributes
+        let counterAttr: Record<string, string> = {};
+        if (metric.value === '4.500+') {
+          counterAttr = { 'data-counter-target': '4500', 'data-counter-suffix': '+', 'data-counter-format': 'id' };
+        } else if (metric.value === '5 Modul') {
+          counterAttr = { 'data-counter-target': '5', 'data-counter-suffix': ' Modul' };
+        } else if (metric.value === '7+') {
+          counterAttr = { 'data-counter-target': '7', 'data-counter-suffix': '+' };
+        }
+
+        return (
+          <div class={`scroll-reveal stagger-${idx + 1} p-6 sm:p-8 flex flex-col justify-between hover:bg-[#F4F0E6] transition-colors group`}>
+            <div>
+              <span class="font-['JetBrains_Mono'] text-xs font-bold text-[#B3202A] uppercase tracking-wider block mb-1">
+                [BUKTI #{String(idx + 1).padStart(2, '0')}]
+              </span>
+              <div
+                class="font-['JetBrains_Mono'] text-4xl sm:text-5xl font-black text-black tracking-tight group-hover:translate-x-1 transition-transform"
+                {...counterAttr}
+              >
+                {metric.value}
+              </div>
+              <div class="font-['Space_Grotesk'] text-lg font-bold text-black mt-2">
+                {metric.label}
+              </div>
             </div>
-            <div class="font-['Space_Grotesk'] text-lg font-bold text-black mt-2">
-              {metric.label}
-            </div>
+            <p class="font-['Space_Grotesk'] text-xs sm:text-sm text-neutral-600 mt-3 pt-3 border-t-2 border-black/10">
+              {metric.detail}
+            </p>
           </div>
-          <p class="font-['Space_Grotesk'] text-xs sm:text-sm text-neutral-600 mt-3 pt-3 border-t-2 border-black/10">
-            {metric.detail}
-          </p>
-        </div>
-      ))}
+        );
+      })}
     </div>
   </div>
 </section>

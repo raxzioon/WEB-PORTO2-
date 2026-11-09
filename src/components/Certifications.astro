@@ -6,7 +6,7 @@ import { siteContent } from '../data/content';
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
     
     <!-- Section Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-[3px] border-black pb-8">
+    <div class="scroll-reveal flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-[3px] border-black pb-8">
       <div class="space-y-3">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#FFD23F] text-black font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-wider border-[2px] border-black shadow-[2px_2px_0_#000]">
           VALIDASI KOMPETENSI
@@ -26,8 +26,8 @@ import { siteContent } from '../data/content';
 
     <!-- Certificate Cards Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {siteContent.certifications.map((cert) => (
-        <div class="bg-white border-[3px] border-black p-6 shadow-[5px_5px_0_#000] flex flex-col justify-between space-y-4 hover:-translate-y-1 transition-transform">
+      {siteContent.certifications.map((cert, cIdx) => (
+        <div class={`scroll-reveal stagger-${(cIdx % 3) + 1} bg-white border-[3px] border-black p-6 shadow-[5px_5px_0_#000] flex flex-col justify-between space-y-4 hover:-translate-y-1 transition-transform`}>
           
           <div class="space-y-3">
             <!-- Issuer & Date Meta -->

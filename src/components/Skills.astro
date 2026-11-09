@@ -6,7 +6,7 @@ import { siteContent } from '../data/content';
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
     
     <!-- Section Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-[3px] border-black pb-8">
+    <div class="scroll-reveal flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-[3px] border-black pb-8">
       <div class="space-y-3">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#3A5BFF] text-white font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-wider border-[2px] border-black shadow-[2px_2px_0_#000]">
           TOOLKIT & CAPABILITIES
@@ -27,7 +27,7 @@ import { siteContent } from '../data/content';
     <!-- Skills Matrix Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
       {siteContent.skills.map((group, gIdx) => (
-        <div class="bg-[#F4F0E6] border-[3px] border-black p-6 sm:p-8 shadow-[6px_6px_0_#000] flex flex-col justify-between space-y-6">
+        <div class={`scroll-reveal stagger-${gIdx + 1} bg-[#F4F0E6] border-[3px] border-black p-6 sm:p-8 shadow-[6px_6px_0_#000] flex flex-col justify-between space-y-6`}>
           
           <div class="space-y-3">
             <!-- Group Badge & Title -->

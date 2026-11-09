@@ -10,7 +10,7 @@ import { siteContent } from '../data/content';
       <div class="lg:col-span-7 space-y-5 sm:space-y-6 min-w-0">
         
         <!-- Availability / Status Tag -->
-        <div class="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 bg-white border-[2px] border-black shadow-[2px_2px_0_#000] sm:shadow-[3px_3px_0_#000]">
+        <div class="hero-snap-1 inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 bg-white border-[2px] border-black shadow-[2px_2px_0_#000] sm:shadow-[3px_3px_0_#000]">
           <span class="w-2 h-2 bg-[#B3202A] inline-block"></span>
           <span class="font-['JetBrains_Mono'] text-[10px] sm:text-xs font-bold uppercase tracking-wider text-black">
             {siteContent.personal.statusBadge}
@@ -18,60 +18,62 @@ import { siteContent } from '../data/content';
         </div>
 
         <!-- Gigantic Brutalist Headline: Clean wrapping across 375, 768, 1440 -->
-        <h1 class="font-['Archivo_Black'] text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.12] tracking-tight text-black break-words min-w-0">
+        <h1 class="hero-snap-2 font-['Archivo_Black'] text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.12] tracking-tight text-black break-words min-w-0">
           Website desa untuk<br class="sm:hidden" />
           <span class="bg-[#FFD23F] px-1.5 sm:px-2 py-0.5 border-[3px] border-black inline-block my-1 shadow-[2px_2px_0_#000] sm:shadow-[4px_4px_0_#000]">4.500 warga.</span><br class="sm:hidden" />
           Dibangun berdua dari nol.
         </h1>
 
         <!-- One Sentence Subhead (Positioning Statement) -->
-        <p class="font-['Space_Grotesk'] text-sm sm:text-lg md:text-xl font-medium text-[#1A1A1A] max-w-2xl leading-relaxed break-words min-w-0">
+        <p class="hero-snap-3 font-['Space_Grotesk'] text-sm sm:text-lg md:text-xl font-medium text-[#1A1A1A] max-w-2xl leading-relaxed break-words min-w-0">
           {siteContent.personal.subheadline}
         </p>
 
         <!-- Identity Subtext: Real Facts -->
-        <div class="flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-1 pt-1 font-['JetBrains_Mono'] text-[11px] sm:text-sm text-neutral-800 break-words min-w-0">
-          <span class="font-bold text-black">{siteContent.personal.fullName}</span>
-          <span class="text-neutral-400 font-black">/</span>
-          <span>{siteContent.personal.major}</span>
-          <span class="text-neutral-400 font-black">/</span>
-          <span class="text-[#B3202A] font-bold">{siteContent.personal.campus}</span>
-        </div>
-
-        <!-- 2 Prominent Call to Actions -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-          <a
-            href="#studi-kasus"
-            class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 bg-[#B3202A] text-white font-['JetBrains_Mono'] text-xs sm:text-sm md:text-base font-bold uppercase border-[3px] border-black shadow-[3px_3px_0_#000] sm:shadow-[4px_4px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all focus:outline-none focus:ring-4 focus:ring-[#3A5BFF]"
-          >
-            <span>Lihat Bukti Proyek</span>
-            <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </a>
-
-          <a
-            href={siteContent.personal.whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 bg-white text-black font-['JetBrains_Mono'] text-xs sm:text-sm md:text-base font-bold uppercase border-[3px] border-black shadow-[3px_3px_0_#000] sm:shadow-[4px_4px_0_#000] hover:bg-[#FFD23F] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all focus:outline-none focus:ring-4 focus:ring-[#3A5BFF]"
-          >
-            <span>Hubungi via WhatsApp</span>
-            <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-        </div>
-
-        <!-- Quick proof bullets -->
-        <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-['JetBrains_Mono'] text-neutral-800">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 bg-black shrink-0"></span>
-            <span>Laravel • Livewire • Docker • MySQL</span>
+        <div class="hero-snap-4 space-y-4">
+          <div class="flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-1 pt-1 font-['JetBrains_Mono'] text-[11px] sm:text-sm text-neutral-800 break-words min-w-0">
+            <span class="font-bold text-black">{siteContent.personal.fullName}</span>
+            <span class="text-neutral-400 font-black">/</span>
+            <span>{siteContent.personal.major}</span>
+            <span class="text-neutral-400 font-black">/</span>
+            <span class="text-[#B3202A] font-bold">{siteContent.personal.campus}</span>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 bg-black shrink-0"></span>
-            <span>Pengajar Roblox, Asisten Lab & Riset ML</span>
+
+          <!-- 2 Prominent Call to Actions -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+            <a
+              href="#studi-kasus"
+              class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 bg-[#B3202A] text-white font-['JetBrains_Mono'] text-xs sm:text-sm md:text-base font-bold uppercase border-[3px] border-black shadow-[3px_3px_0_#000] sm:shadow-[4px_4px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all focus:outline-none focus:ring-4 focus:ring-[#3A5BFF]"
+            >
+              <span>Lihat Bukti Proyek</span>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </a>
+
+            <a
+              href={siteContent.personal.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 bg-white text-black font-['JetBrains_Mono'] text-xs sm:text-sm md:text-base font-bold uppercase border-[3px] border-black shadow-[3px_3px_0_#000] sm:shadow-[4px_4px_0_#000] hover:bg-[#FFD23F] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all focus:outline-none focus:ring-4 focus:ring-[#3A5BFF]"
+            >
+              <span>Hubungi via WhatsApp</span>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Quick proof bullets -->
+          <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-['JetBrains_Mono'] text-neutral-800">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-black shrink-0"></span>
+              <span>Laravel • Livewire • Docker • MySQL</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-black shrink-0"></span>
+              <span>Pengajar Roblox, Asisten Lab & Riset ML</span>
+            </div>
           </div>
         </div>
 
@@ -81,7 +83,7 @@ import { siteContent } from '../data/content';
       <div class="lg:col-span-5 relative mt-6 lg:mt-0 min-w-0">
         
         <!-- Rotating Sticker Badge: Juara 1 BizCREATE 2026 (Max 2-3 rotated elements, safe mobile bounds) -->
-        <div class="absolute -top-3 left-2 sm:-left-4 z-20 transform -rotate-2 bg-[#FFD23F] border-[3px] border-black shadow-[3px_3px_0_#000] sm:shadow-[4px_4px_0_#000] px-3 py-1.5 max-w-[220px]">
+        <div class="hero-sticker-slap absolute -top-3 left-2 sm:-left-4 z-20 transform -rotate-2 bg-[#FFD23F] border-[3px] border-black shadow-[3px_3px_0_#000] sm:shadow-[4px_4px_0_#000] px-3 py-1.5 max-w-[220px]">
           <div class="font-['JetBrains_Mono'] text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-black flex items-center gap-1.5">
             <span class="w-2 h-2 bg-[#B3202A] inline-block"></span>
             JUARA 1 BIZCREATE 2026
@@ -92,7 +94,7 @@ import { siteContent } from '../data/content';
         </div>
 
         <!-- Frame Card with High-Contrast Photo -->
-        <div class="bg-white border-[3px] border-black shadow-[5px_5px_0_#000] sm:shadow-[8px_8px_0_#000] p-3 sm:p-4 relative">
+        <div class="hero-photo-snap bg-white border-[3px] border-black shadow-[5px_5px_0_#000] sm:shadow-[8px_8px_0_#000] p-3 sm:p-4 relative">
           
           <!-- Top Window Controls (Brutalist Decorative Bar) -->
           <div class="flex items-center justify-between border-b-[2px] border-black pb-2 mb-2.5">
