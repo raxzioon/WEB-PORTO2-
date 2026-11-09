@@ -114,6 +114,17 @@ async function run() {
       await new Promise(r => setTimeout(r, 200));
     }
 
+    // Also click Google BI cert trigger
+    const googleBiTrigger = await page.$('[data-cert-title="Google Business Intelligence Professional Certificate"]');
+    if (googleBiTrigger) {
+      await googleBiTrigger.click();
+      await new Promise(r => setTimeout(r, 300));
+      await page.screenshot({ path: path.join('screenshots', 'desktop-1440-cert-modal-google-bi.png') });
+      const closeBtn = await page.$('#modal-cert-close');
+      if (closeBtn) await closeBtn.click();
+      await new Promise(r => setTimeout(r, 200));
+    }
+
     // Also click IDX SPM trigger to test SPM modal
     const spmTrigger = await page.$('[data-cert-title="Sekolah Pasar Modal (SPM)"]');
     if (spmTrigger) {
