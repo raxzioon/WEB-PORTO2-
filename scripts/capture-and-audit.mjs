@@ -93,13 +93,25 @@ async function run() {
   // Certifications
   const certEl = await page.$('#sertifikasi');
   if (certEl) {
-    // Reveal all scroll elements so full element screenshots show all cards
-    await page.evaluate(() => {
+    // Reveal all scroll elements and wait for images to complete loading
+    await page.evaluate(async () => {
       document.querySelectorAll('.scroll-reveal').forEach((el) => {
         el.classList.add('is-revealed');
       });
+      // Force trigger all lazy images
+      document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+        img.loading = 'eager';
+      });
+      const images = Array.from(document.querySelectorAll('img'));
+      await Promise.all(images.map(img => {
+        if (img.complete) return;
+        return new Promise(resolve => {
+          img.onload = resolve;
+          img.onerror = resolve;
+        });
+      }));
     });
-    await new Promise(r => setTimeout(r, 400));
+    await new Promise(r => setTimeout(r, 600));
     // Capture the entire element
     await certEl.screenshot({ path: path.join('screenshots', 'desktop-1440-certifications.png') });
 
