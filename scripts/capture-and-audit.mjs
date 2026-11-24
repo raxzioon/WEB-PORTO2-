@@ -77,8 +77,11 @@ async function run() {
   // Experience
   const expEl = await page.$('#pengalaman');
   if (expEl) {
-    await page.evaluate(() => document.querySelector('#pengalaman')?.scrollIntoView({ block: 'start' }));
-    await new Promise(r => setTimeout(r, 200));
+    await page.evaluate(() => {
+      document.querySelector('#pengalaman')?.scrollIntoView({ block: 'start' });
+      document.querySelectorAll('.scroll-reveal').forEach((el) => el.classList.add('is-revealed'));
+    });
+    await new Promise(r => setTimeout(r, 500));
     await page.screenshot({ path: path.join('screenshots', 'desktop-1440-experience.png') });
   }
 

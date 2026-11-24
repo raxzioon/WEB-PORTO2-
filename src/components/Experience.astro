@@ -26,6 +26,7 @@ import { siteContent } from '../data/content';
           <span>STATUS AKTIF SAAT INI:</span>
         </div>
         <div class="text-[#B3202A] font-bold">● S1 Sistem Informasi (Telkom University)</div>
+        <div class="text-neutral-900 font-bold">● IT Dev Director (SRE Telkom University)</div>
         <div class="text-neutral-900 font-bold">● Research Assistant (SAG Laboratory)</div>
         <div class="text-neutral-900 font-bold">● Practicum Assistant (SAG Laboratory)</div>
       </div>
@@ -77,6 +78,67 @@ import { siteContent } from '../data/content';
                 </li>
               ))}
             </ul>
+
+            <!-- Key Digital Initiatives / Platforms -->
+            {item.initiatives && (
+              <div class="mt-5 pt-4 border-t-[2px] border-black/15 space-y-3">
+                <div class="font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-wider text-black flex items-center gap-2">
+                  <span class="px-2 py-0.5 bg-[#FFD23F] border border-black shadow-[1px_1px_0_#000]">
+                    EKOSISTEM DIGITAL DIBAWAH KEPEMIMPINAN:
+                  </span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {item.initiatives.map((init) => (
+                    <div class="bg-white border-[2px] border-black p-3.5 shadow-[3px_3px_0_#000] flex flex-col justify-between space-y-2 hover:-translate-y-0.5 transition-transform">
+                      <div class="space-y-1">
+                        <div class="flex items-center justify-between gap-2">
+                          <h4 class="font-['Archivo_Black'] text-sm text-black leading-tight">
+                            {init.title}
+                          </h4>
+                          {init.url && (
+                            <a 
+                              href={init.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              class="font-['JetBrains_Mono'] text-[11px] font-bold text-[#3A5BFF] hover:text-[#B3202A] shrink-0"
+                              aria-label={`Buka ${init.title}`}
+                            >
+                              Kunjungi ↗
+                            </a>
+                          )}
+                        </div>
+                        <p class="font-['Space_Grotesk'] text-xs text-neutral-600 leading-snug">
+                          {init.desc}
+                        </p>
+                      </div>
+                      <div class="pt-2 border-t border-black/10 font-['JetBrains_Mono'] text-[10px] font-bold text-neutral-800 bg-[#F4F0E6] px-2 py-1 border border-black/20">
+                        Stack: {init.tech}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <!-- Media Attachment -->
+            {item.media && (
+              <div class="mt-5 pt-4 border-t-[2px] border-black/15">
+                <div class="border-[2px] border-black bg-white p-2.5 shadow-[4px_4px_0_#000] inline-block max-w-lg w-full">
+                  <div class="aspect-[16/9] overflow-hidden bg-neutral-100 border border-black">
+                    <img 
+                      src={item.media.image} 
+                      alt={item.media.caption} 
+                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="font-['JetBrains_Mono'] text-xs font-bold text-neutral-900 pt-2.5 flex items-center gap-2">
+                    <span class="inline-block w-2.5 h-2.5 bg-[#7BE0B3] border border-black shrink-0"></span>
+                    <span>{item.media.caption}</span>
+                  </div>
+                </div>
+              </div>
+            )}
 
           </div>
         </div>

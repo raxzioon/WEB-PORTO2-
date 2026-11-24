@@ -40,9 +40,19 @@ export interface ExperienceItem {
   period: string;
   title: string;
   organization: string;
-  category: 'Akademik & Riset' | 'Pengajaran' | 'Engineering' | 'Operasional';
+  category: 'Akademik & Riset' | 'Pengajaran' | 'Engineering' | 'Operasional' | 'Kepemimpinan & Engineering';
   highlights: string[];
   badgeColor?: string;
+  media?: {
+    image: string;
+    caption: string;
+  };
+  initiatives?: {
+    title: string;
+    url?: string;
+    tech: string;
+    desc: string;
+  }[];
 }
 
 export interface TeachingItem {
@@ -140,10 +150,12 @@ export const siteContent = {
   ] as Metric[],
 
   ticker: [
+    'IT DEV DIRECTOR SRE TELKOM',
     'SISTEM SURAT MENYURAT ONLINE',
     'LARAVEL & DOCKER SPECIALIST',
     '4.500+ WARGA DESA TERLAYANI',
     'JUARA 1 BIZCREATE 2026',
+    'REACT & FULL-STACK ECOSYSTEMS',
     'POWER BI & DATA VISUALIZATION',
     'MASTER TEACHER ROBLOX STUDIO',
     'ASISTEN PRAKTIKUM SAG LAB TELKOM',
@@ -225,6 +237,48 @@ export const siteContent = {
   ] as CaseStudy[],
 
   experience: [
+    {
+      period: 'November 2026 - Sekarang',
+      title: 'IT Dev Director',
+      organization: 'Society of Renewable Energy (SRE) Telkom University',
+      category: 'Kepemimpinan & Engineering',
+      badgeColor: '#7BE0B3',
+      highlights: [
+        'Memimpin divisi IT Development dalam merancang arsitektur, mengembangkan, dan memelihara ekosistem digital end-to-end organisasi.',
+        'Mensupervisi langsung Project Managers (PIC) dan staf developer, mengawal eksekusi sprint, standar teknis, arsitektur sistem, dan alur kerja deployment di berbagai platform web.',
+        'Mengarahkan 4 platform digital kunci: SRE Official Company Profile (Laravel 11, Tailwind CSS, MySQL, Docker Sail), REACT 2026 Competition Platform (React 18, PHP REST API, MySQL 8, Docker, GitHub Actions CI/CD), Learnergy LMS (React 18, PHP REST API, MariaDB), serta SRE Event RSVP & Gateway QRIS (React 19, Supabase PostgreSQL, Vercel).',
+      ],
+      media: {
+        image: '/images/sre-discussion.jpg',
+        caption: 'Sesi Diskusi Strategis bersama Jajaran Direktur SRE Telkom University',
+      },
+      initiatives: [
+        {
+          title: 'SRE Official Company Profile',
+          url: 'https://sretelu.com',
+          tech: 'Laravel 11 • Tailwind CSS • MySQL • Docker Sail',
+          desc: 'Portal utama organisasi dengan CMS dinamis departemen, program kerja, statistik anggota, dan publikasi karya.',
+        },
+        {
+          title: 'REACT 2026 Competition Platform',
+          url: 'https://comp.sretelu.com',
+          tech: 'React 18 • PHP REST API • MySQL 8 • Docker • GitHub Actions CI/CD',
+          desc: 'Sistem manajemen kompetisi nasional: registrasi tim, pengumpulan multi-kategori, broadcast, dan alur kerja multi-peran.',
+        },
+        {
+          title: 'Learnergy E-Learning Platform',
+          url: 'https://learn.sretelu.com',
+          tech: 'React 18 • PHP REST API • MySQL/MariaDB',
+          desc: 'Learning Management System internal dengan modul pembelajaran terstruktur, kuis interaktif, event, dan analitik pengguna.',
+        },
+        {
+          title: 'SRE Event RSVP & Digital Gateway',
+          url: 'https://sre-rsvp.vercel.app',
+          tech: 'React 19 • Supabase (PostgreSQL) • Vercel',
+          desc: 'Sistem registrasi event, katering, dan validasi pembayaran QRIS terintegrasi.',
+        },
+      ],
+    },
     {
       period: 'November 2026 - Sekarang',
       title: 'Research Assistant (Research Division)',
